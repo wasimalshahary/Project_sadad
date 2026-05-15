@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #1a56db;
+  --color-secondary: #f3f4f6;
+  --color-accent: #fbbf24;
+}
+
+body {
+  direction: rtl;
+  @apply bg-gray-50 text-gray-900;
+}
+
+.tab-bar-active {
+  @apply text-primary font-bold;
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-gray-200 shadow-sm rounded-2xl;
+}
+
+@layer components {
+  .nav-item {
+    @apply flex flex-col items-center gap-1 text-gray-500 transition-colors duration-200;
+  }
+  .nav-item.active {
+    @apply text-blue-600;
+  }
+}
